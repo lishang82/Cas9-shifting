@@ -27,3 +27,14 @@ Below is an overview of the data processing and statistical tracking scripts com
 
 └── 04_cellassay_statistical/           # Downstream validation in cellular models (Figure 3)
     └── 01_InDel_pattern.R              # Multi-batch CRISPResso2 integration & 2x5 programmatic plotting
+
+The downstream computational pipelines and statistical scaling models are implemented and validated using R (version 4.2.0 or higher).
+
+install.packages(c("tidyverse", "VennDiagram", "ggVennDiagram", "patchwork", "scatterplot3d"))
+
+cd 01_upstream_pipeline/
+bash 01_alignment_and_analysis.sh <forward_reads.fastq.gz> <reverse_reads.fastq.gz>
+cd 02_fig3_random_library/
+Rscript 01_library.R <path_to_replicate_1.txt> <path_to_replicate_2.txt> <path_to_replicate_3.txt>
+cd 03_cellassay_statistical/
+Rscript 01_InDel_pattern.R
