@@ -27,6 +27,7 @@ Below is an overview of the data processing and statistical tracking scripts com
 
 └── 04_cellassay_statistical/           # Downstream validation in cellular models (Figure 3)
     └── 01_InDel_pattern.R              # Multi-batch CRISPResso2 integration & 2x5 programmatic plotting
+```
 
 ## 🛠️ System Requirements & Runtime Dependencies
 
